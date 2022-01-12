@@ -38,7 +38,7 @@ func (ps *ParameterStore) GetAllParametersByPath(path string, decrypt bool) (*Pa
 	var input = &ssm.GetParametersByPathInput{}
 	input.SetWithDecryption(decrypt)
 	input.SetPath(path)
-	input.SetMaxResults(10)
+	input.SetMaxResults(2)
 	return ps.getParameters(input)
 }
 
